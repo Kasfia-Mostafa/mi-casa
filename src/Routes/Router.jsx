@@ -1,10 +1,28 @@
 import { createBrowserRouter } from "react-router-dom";
+import Main from "../Layout/Main/Main";
+import HomePage from "../Pages/Home/HomePage/HomePage";
+import Login from "../Layout/Login/Login";
+import Register from "../Layout/Register/Registration";
 
-const Router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <HomePage></HomePage>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
+      },
+    ]
   },
 ]);
 
-export default Router;
+export default router;
