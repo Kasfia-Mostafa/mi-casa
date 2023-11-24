@@ -82,7 +82,7 @@ const Banner = () => {
             variants={titleAnimation}
             initial="hidden"
             animate="show"
-            className="flex text-8xl font-bold text-[#497898] drop-shadow-lg z-50">
+            className="flex text-8xl font-San font-bold text-[#497898] drop-shadow-lg z-50">
             {Array.from("Mi-CASA").map((letter,idx) => (
               <motion.span key={idx} variants={titleAnimationChildren}>{letter}</motion.span>
             ))}
@@ -92,7 +92,7 @@ const Banner = () => {
           <motion.img src="https://i.ibb.co/kmSpxh5/R-6.jpg" alt="art" className="object-cover" variants={imgAnimation} initial="hidden" animate="show" />
         </div>
         <motion.div className="bg-white p-4 w-[300px] absolute bottom-[150px] right-[200px] drop-shadow-lg z-50" variants={explainAnimation} initial="hidden" animate="show">
-          <p className="text-[#35729c] text-sm text-justify">
+          <p className="text-[#35729c] text-sm text-justify font-DM">
           "Welcome to our real estate platform! Discover properties, connect with agents, and explore insights for seamless property transactions. Start your search today!"          </p>
         </motion.div>
       </section>

@@ -89,7 +89,7 @@ const Navbar = () => {
           <img src="https://i.ibb.co/4Pb0f0c/icons8-home.gif" alt="" />
           <div className="pl-4">
             <p className="w-20 h-8 text-center rounded-lg text-[#F8F8F8] text-xl font-San bg-gradient-to-r from-blue-300 to-blue-200 border-none">
-              Mi casa
+              Mi CASA
             </p>
           </div>
         </div>
