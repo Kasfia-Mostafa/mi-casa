@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="p-4 bg-[#dedede] sm:p-6  font-DM">
+      <footer className="p-4 bg-white sm:p-6 font-DM border-t-2">
         <div className="mx-auto max-w-screen-xl">
           <div className="md:flex md:justify-between">
             <div className="my-5">

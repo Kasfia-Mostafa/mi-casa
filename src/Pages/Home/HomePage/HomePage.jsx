@@ -1,9 +1,11 @@
 import Banner from "../BannerSection/Banner";
+import Cards from "../CardSection/Cards";
 
 const HomePage = () => {
   return (
     <div>
-     <Banner></Banner>
+      <Banner></Banner>
+      <Cards></Cards>
     </div>
   );
 };
