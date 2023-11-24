@@ -1,6 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../Layout/AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const [error, setError] = useState("");
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user)
+  const navigate = useNavigate();
+
   const navOptions = (
     <>
       <li>
@@ -47,9 +54,19 @@ const Navbar = () => {
       </li>
     </>
   );
+  const handleSignOut = () => {
+    logOut()
+      .then((result) => {
+        navigate("/");
+      })
+      .catch((error) => {
+        setError(error.massage);
+      });
+  };
+
   return (
     <div>
-      <div className="navbar bg-[#F3F3F3]">
+      <div className="navbar bg-[#F3F3F3] px-24">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -83,10 +100,16 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+                {
+                  user ? <img
+                  alt=""
+                  src={user?.photoURL}
+                />:<img
+                alt=""
+                src='https://i.ibb.co/3mrC5qK/966-9665493-my-profile-icon-blank-profile-image-circle.jpg'
+              />
+                }
+                
               </div>
             </label>
             <ul
@@ -94,16 +117,24 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">Profile</a>
+                <a>Profile</a>
               </li>
               <li>
                 <a>Settings</a>
               </li>
-              <Link to="/login">
+              {user ? (
                 <li>
-                  <a>Login</a>
+                  <a onClick={handleSignOut} className="text-black">
+                    Log Out
+                  </a>
                 </li>
-              </Link>
+              ) : (
+                <Link to="/login">
+                  <li>
+                    <a className="text-black">Login</a>
+                  </li>
+                </Link>
+              )}
             </ul>
           </div>
         </div>

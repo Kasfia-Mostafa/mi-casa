@@ -1,101 +1,71 @@
-// import { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../../Providers/AuthProvider";
-// import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
-  // const { createUser, googleSignIn, handleUpdateProfile } =
-  //   useContext(AuthContext);
-  // const navigate = useNavigate();
+  const { createUser, googleSignIn, handleUpdateProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  // const [error, setError] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  // const handleRegister = (e) => {
-  //   e.preventDefault();
-  //   console.log(e.currentTarget);
-  //   const form = new FormData(e.currentTarget);
+  const handleRegister = event => {
+    event.preventDefault();
+    console.log(event.currentTarget);
+    const form = new FormData(event.currentTarget);
+    const name = form.get("name");
+    const photo = form.get("photo");
+    const email = form.get("email");
+    const password = form.get("password");
 
-  //   const name = form.get("name");
-  //   const photo = form.get("photo");
-  //   const email = form.get("email");
-  //   const password = form.get("password");
+    createUser(email, password)
+      .then((result) => {
+        handleUpdateProfile(name, photo)
+        .then(() => {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Register successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/");
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
-  //   const userInfo = {name,email}
+    if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*[^a-zA-Z]).{6,}$/.test(password)) {
+      setError(
+        "Minimum six characters, one special character and and a capital letter"
+      );
+    } else {
+      setError("");
+      if (email) {
+        createUser(email, password).then((result) => {
+          console.log(result.user);
+        });
+      }
+    }
+  };
 
-  //   console.log(name)
+  const handleGoogleRegister = () => {
+    googleSignIn().then((result) => {
+      console.log(result.user);
+    });
+  };
 
-  //   fetch('https://moonstar-restaurant-server.vercel.app/users',{
-  //     method: 'POST',
-  //     headers:{
-  //       'content-type' : 'application/json'
-  //     },
-  //     body: JSON.stringify(userInfo)
-  //   })
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     console.log(data)
-  //     Swal.fire({
-  //       title: 'Success!',
-  //       text: 'Product added successfully',
-  //       icon: 'success',
-  //       confirmButtonText: 'Cool'
-  //     })
-  //   })
-  //   .then(res => res.json())
-  //   .then(data=> {
-  //     console.log(data)
-  //   }) 
-
-  //   createUser(email, password)
-  //     .then((result) => {
-  //       handleUpdateProfile(name, photo).then(() => {
-  //         <ToastContainer
-  //           position="top-center"
-  //           autoClose={5000}
-  //           hideProgressBar={false}
-  //           newestOnTop={false}
-  //           closeOnClick
-  //           rtl={false}
-  //           pauseOnFocusLoss
-  //           draggable
-  //           pauseOnHover
-  //           theme="dark"
-  //         />;
-  //         navigate("/");
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //     });
-
-  //   if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*[^a-zA-Z]).{6,}$/.test(password)) {
-  //     setError(
-  //       "Minimum six characters, one special character and and a capital letter"
-  //     );
-  //   } else {
-  //     setError("");
-  //     if (email) {
-  //       createUser(email, password).then((result) => {
-  //         console.log(result.user);
-  //       });
-  //     }
-  //   }
-  // };
-
-  // const handleGoogleRegister = () => {
-  //   googleSignIn().then((result) => {
-  //     console.log(result.user);
-  //   });
-  // };
-
-  // const notify = () => toast("Successfully register");
+  const notify = () => toast("Successfully register");
 
   return (
     <div className="h-[80vh] font-DM">
       <div className="w-full relative">
-      <img className="w-full h-[120vh]"
+        <img
+          className="w-full h-[120vh]"
           src="https://i.ibb.co/mq326q3/cool-background.png"
           alt="matthew-henry-T-G9-PVLOf-OY-unsplash"
           border="0"
@@ -109,7 +79,7 @@ const Register = () => {
                 Register Account
               </h1>
               <form
-                // onSubmit={handleRegister}
+                onSubmit={handleRegister}
                 className="space-y-4 md:space-y-6"
                 action="#"
               >
@@ -145,7 +115,7 @@ const Register = () => {
                     required=""
                   />
                 </div>
-               
+
                 <div>
                   <label
                     for="email"
@@ -181,7 +151,7 @@ const Register = () => {
 
                 <div className="flex justify-center">
                   <button
-                    // onClick={notify}
+                    onClick={notify}
                     type="submit"
                     className="text-white bg-gradient-to-r from-slate-700 to-slate-400 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                   >
@@ -199,7 +169,7 @@ const Register = () => {
               </form>
               <div className="flex justify-center">
                 <button
-                  // onClick={handleGoogleRegister}
+                  onClick={handleGoogleRegister}
                   type="button"
                   className="flex hover:text-white hover:bg-slate-700 bg-white text-black focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
                 >
