@@ -84,17 +84,17 @@ const Card = ({ plot }) => {
         >
           {property_location}
         </p>
-       <div className="flex justify-center gap-2">
-       <p
-          style={{
-            transform: "translateZ(50px)",
-          }}
-          className="text-center text-sm font-DM text-gray-500"
-        >
-          {property_price}
-        </p>
-        <RiVerifiedBadgeFill className="text-green-500 text-xl" />
-       </div>
+        <div className="flex justify-center gap-2">
+          <p
+            style={{
+              transform: "translateZ(50px)",
+            }}
+            className="text-center text-sm font-DM text-gray-500"
+          >
+            {property_price}
+          </p>
+          <RiVerifiedBadgeFill className="text-green-500 text-xl" />
+        </div>
         <div className="flex justify-center mt-5">
           <button
             style={{
