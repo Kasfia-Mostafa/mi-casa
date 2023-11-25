@@ -5,7 +5,7 @@ import { AuthContext } from "../../../Layout/AuthProvider/AuthProvider";
 const Navbar = () => {
   const [error, setError] = useState("");
   const { user, logOut } = useContext(AuthContext);
-  console.log(user)
+  // console.log(user)
   const navigate = useNavigate();
 
   const navOptions = (

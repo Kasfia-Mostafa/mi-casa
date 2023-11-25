@@ -1,9 +1,9 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 const Card = ({ plot }) => {
-  const { property_image, property_location, property_price, property_title } =
+  const { property_image, property_location, property_price, property_title,_id } =
     plot || [];
-  console.log(property_title);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -96,14 +96,17 @@ const Card = ({ plot }) => {
           <RiVerifiedBadgeFill className="text-green-500 text-xl" />
         </div>
         <div className="flex justify-center mt-5">
-          <button
-            style={{
-              transform: "translateZ(50px)",
-            }}
-            className="text-white font-semibold font-DM w-20 bg-gradient-to-r from-[#4fa5dd] to-[#97cef4] hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-          >
-            Details
-          </button>
+          <Link to={`/allProperties/${_id}`}>
+            {" "}
+            <button
+              style={{
+                transform: "translateZ(50px)",
+              }}
+              className="text-white font-semibold font-DM w-20 bg-gradient-to-r from-[#4fa5dd] to-[#97cef4] hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            >
+              Details
+            </button>
+          </Link>
         </div>
       </div>
     </motion.div>

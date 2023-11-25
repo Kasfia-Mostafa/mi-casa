@@ -3,6 +3,10 @@ import Main from "../Layout/Main/Main";
 import HomePage from "../Pages/Home/HomePage/HomePage";
 import Login from "../Layout/Login/Login";
 import Register from "../Layout/Register/Registration";
+import Properties from "../Pages/AllProperties/Properties/Properties";
+import PropertyDetails from "../Pages/AllProperties/PropertyDetails/PropertyDetails";
+import PrivateRoute from "../Layout/PrivateRoute/PrivateRoute"
+import Reviews from "../Pages/AllProperties/Reviews/Reviews";
 
 const router = createBrowserRouter([
   {
@@ -14,11 +18,26 @@ const router = createBrowserRouter([
         element: <HomePage></HomePage>
       },
       {
-        path: "/login",
+        path: "allProperties",
+        element: <Properties></Properties>,
+        loader:  () => fetch(`http://localhost:5000/propertyCount`),
+      },
+      {
+        path: "allProperties/:id",
+        element:<PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
+        loader:  ({params}) => fetch(`http://localhost:5000/property/${params.id}`),
+      },
+      {
+        path: "review/:title",
+        element:<Reviews></Reviews>,
+        loader:  ({params}) => fetch(`http://localhost:5000/review/${params.title}`),
+      },
+      {
+        path: "login",
         element: <Login></Login>
       },
       {
-        path: "/register",
+        path: "register",
         element: <Register></Register>
       },
     ]

@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProvider";
-import Loader from "../../Utility/Loader";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import Loader from "../../Components/Loader/Loader";
 
 const PrivateRoute = ({children}) => {
   const {user,loading} = useContext(AuthContext);
 
-  if(loading){
-    return <Loader></Loader>
-  }
+  // if(loading){
+  //   return <Loader></Loader>
+  // }
 
   if(user){
     return children;

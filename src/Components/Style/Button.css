@@ -1,0 +1,22 @@
+.pagination{
+  text-align: center;
+  margin-bottom:40px ;
+  background-color: aliceblue;
+  width: 340px;
+  height: 40px;
+  color: rgb(215, 121, 204);
+  border-radius: 10px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  margin-left: 400px;
+}
+
+.pagination button{
+  margin-right: 10px;
+}
+.pagination .selected{
+  background-color: rgb(208, 85, 157);
+  color: white;
+  width: 40px;
+  height: 40px;
+}
