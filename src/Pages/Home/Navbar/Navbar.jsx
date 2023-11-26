@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Layout/AuthProvider/AuthProvider";
+import DashboardPage from "../../Dashboard/DashBoardPage/DashboardPage";
 
 const Navbar = () => {
   const [error, setError] = useState("");
@@ -49,7 +50,7 @@ const Navbar = () => {
               : "text-[#529AC0] text-lg font-DM"
           }
         >
-          Dashboard
+        Dashboard
         </NavLink>
       </li>
     </>

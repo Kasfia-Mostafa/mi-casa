@@ -1,14 +1,21 @@
 import { RiVerifiedBadgeFill } from "react-icons/ri";
-import { useLoaderData } from "react-router-dom";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Reviews from "../Reviews/Reviews";
+import { AuthContext } from "../../../Layout/AuthProvider/AuthProvider";
+import useAxiosSecure from "../../../Hooks/UseAxiosSecure";
+import useItemProperty from "../../../Hooks/useItemProperty";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const PropertyDetails = () => {
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
   const eachProperty = useLoaderData();
   const axiosPublic = useAxiosPublic();
+  const axiosSecure = useAxiosSecure()
   const [reviews, setReviews] = useState([]);
+  const [,refetch]= useItemProperty()
 
   const {
     property_image,
@@ -18,7 +25,14 @@ const PropertyDetails = () => {
     agent_name,
     agent_image,
     description,
+    _id
   } = eachProperty || [];
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/review`)
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  });
 
   const handleReview = (event) => {
     event.preventDefault();
@@ -41,16 +55,53 @@ const PropertyDetails = () => {
     });
   };
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/review`)
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
-  });
-
   const filteredReview = reviews.filter(
     (review) => review.title === eachProperty.property_title
   );
 
+  const handleWishProperty = () => {
+    if (user && user.email) {
+      const cartItem = {
+        email: user.email,
+        property_image,
+        property_location,
+        property_price,
+        property_title,
+        agent_name,
+        agent_image,
+        description,
+      }
+      axiosSecure.post('/wishList',cartItem)
+      .then(res => {
+        console.log(res.data)
+        if(res.data.insertedId){
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Added to wishlist",
+            showConfirmButton: false,
+            timer: 1500,
+          })
+          refetch()
+        }
+      })
+
+    } else {
+      Swal.fire({
+        title: "You are not login",
+        text: "Please login to add to the cart",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, login!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/login", { state: { from: location } });
+        }
+      });
+    }
+  };
 
   return (
     <div className="bg-white py-10 h-[150vh]">
@@ -62,7 +113,7 @@ const PropertyDetails = () => {
           <div className="mx-8 font-DM border-amber-300 border-l-8 px-4">
             <h2 className="text-6xl text-amber-600">{property_title}</h2>
             <p className="text-2xl text-gray-600">{property_location}</p>
-            <p className="text-2xl text-amber-500">{property_price}</p>
+            <p className="text-2xl text-amber-500">${property_price}</p>
             <div className="flex gap-3">
               <img className="w-5 rounded-md" src={agent_image} alt="" />
               <p>{agent_name}</p>
@@ -70,8 +121,9 @@ const PropertyDetails = () => {
             </div>
             <p className="text-2xl text-gray-600">{description}</p>
             <button
+              onClick={handleWishProperty}
               type="submit"
-              className="text-white bg-gradient-to-r from-amber-600 to-amber-200 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+              className="text-white bg-gradient-to-r from-amber-600 to-amber-200 hover:bg-gradient-to-l font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
             >
               Add to wish
             </button>
@@ -100,11 +152,12 @@ const PropertyDetails = () => {
               Submit
             </button>
           </form>
-          
         </div>
         <div className="w-2/3 mx-auto rounded-lg border-2 border-yellow-500 py-14 mt-28">
-        <p className="text-center text-3xl  font-semibold font-DM text-amber-600 underline">Reviews</p>
-        {filteredReview.map((eachReview) => (
+          <p className="text-center text-3xl  font-semibold font-DM text-amber-600 underline">
+            Reviews
+          </p>
+          {filteredReview.map((eachReview) => (
             <Reviews key={eachReview._id} eachReview={eachReview}></Reviews>
           ))}
         </div>
