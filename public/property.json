@@ -5,6 +5,7 @@
       "property_price": "500000",
       "property_title": "Modern Family Home",
       "agent_name": "John Smith",
+      "agent-email": "jhonsmith@gmail.com",
       "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
       "description": "A beautiful 3-bedroom home with a spacious backyard and modern amenities."
   },
@@ -14,6 +15,7 @@
       "property_price": "750000",
       "property_title": "Luxury Beachfront Villa",
       "agent_name": "Daniel Miller",
+      "agent-email": "denialMiler@gmail.com",
       "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
       "description": "Stunning villa with direct beach access, panoramic ocean views, and premium features."
   },
@@ -23,15 +25,17 @@
       "property_price": "1200000",
       "property_title": "Rustic Countryside Retreat",
       "agent_name": "Michael Brown",
+      "agent-email": "michaelbrown@gmail.com",
       "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
       "description": "A charming country home surrounded by nature, featuring a cozy fireplace and scenic views."
   },
   {
-      "property_image": "https://i.ibb.co/XthPxFH/Hampton-ranch-shingle-front-elevation-2.jpg",
+      "property_image": "https://i.ibb.co/7VQrvVV/OIP-8.jpg",
       "property_location": "101 Pine Road, City D",
       "property_price": "900000",
       "property_title": "Urban Loft with City Views",
       "agent_name": "Sam Wilson",
+      "agent-email": "samwilson@gmail.com",
       "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
       "description": "Spacious loft-style apartment overlooking the city skyline with modern design elements."
   },
@@ -41,6 +45,7 @@
       "property_price": "1500000",
       "property_title": "Elegant Mansion Estate",
       "agent_name": "Daniel Miller",
+      "agent-email": "denialMiler@gmail.com",
       "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
       "description": "An exquisite mansion estate with lavish interiors, sprawling gardens, and private amenities."
   },
@@ -50,6 +55,7 @@
       "property_price": "650000",
       "property_title": "Charming Suburban Home",
       "agent_name": "John Smith",
+      "agent-email": "jhonsmith@gmail.com",
       "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
       "description": "A delightful 4-bedroom house in a quiet neighborhood with a lovely backyard."
   },
@@ -59,6 +65,7 @@
       "property_price": "850000",
       "property_title": "Sleek Urban Condo",
       "agent_name": "Daniel Miller",
+      "agent-email": "denialMiler@gmail.com",
       "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
       "description": "Modern condo living at its finest with city conveniences and upscale finishes."
   },
@@ -68,6 +75,7 @@
       "property_price": "1800000",
       "property_title": "Exclusive Waterfront Property",
       "agent_name": "Michael Brown",
+      "agent-email": "michaelbrown@gmail.com",
       "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
       "description": "A luxurious waterfront home featuring stunning views and a private dock."
   },
@@ -77,6 +85,7 @@
       "property_price": "950000",
       "property_title": "Contemporary Townhouse",
       "agent_name": "Sam Wilson",
+      "agent-email": "samwilson@gmail.com",
       "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
       "description": "Contemporary townhouse offering sleek design and convenient urban living."
   },
@@ -86,6 +95,7 @@
       "property_price": "1250000",
       "property_title": "Mountain View Retreat",
       "agent_name": "Daniel Miller",
+      "agent-email": "denialMiler@gmail.com",
       "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
       "description": "Tranquil retreat nestled in the mountains with stunning panoramic views."
   },
@@ -95,6 +105,7 @@
     "property_price": "500000",
     "property_title": "Charming Family Home",
     "agent_name": "John Smith",
+    "agent-email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
     "description": "A cozy 3-bedroom home with a beautiful garden and nearby amenities."
 },
@@ -104,6 +115,7 @@
     "property_price": "750000",
     "property_title": "Luxury Riverside Villa",
     "agent_name": "Daniel Miller",
+    "agent-email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
     "description": "Elegant villa overlooking the river, featuring a pool and lush landscaped grounds."
 },
@@ -113,6 +125,7 @@
     "property_price": "1200000",
     "property_title": "Mountain View Retreat",
     "agent_name": "Michael Brown",
+    "agent-email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
     "description": "Secluded retreat with stunning mountain vistas, hiking trails, and a modern cabin."
 },
@@ -122,6 +135,7 @@
     "property_price": "900000",
     "property_title": "Urban Loft Living",
     "agent_name": "Sam Wilson",
+    "agent-email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
     "description": "Spacious loft in the heart of the city with exposed brick walls and city skyline views."
 },
@@ -131,6 +145,7 @@
     "property_price": "1500000",
     "property_title": "Mansion in the Hills",
     "agent_name": "Daniel Miller",
+    "agent-email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
     "description": "Grand mansion atop the hills, featuring sprawling gardens and exquisite interiors."
 },
@@ -140,6 +155,7 @@
     "property_price": "650000",
     "property_title": "Suburban Gem",
     "agent_name": "John Smith",
+    "agent-email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
     "description": "Immaculate suburban home with a spacious backyard and modern amenities."
 },
@@ -149,6 +165,7 @@
     "property_price": "1800000",
     "property_title": "Seaside Estate",
     "agent_name": "Daniel Miller",
+    "agent-email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
     "description": "Stunning estate along the coast, with private beach access and breathtaking ocean views."
 },
@@ -158,6 +175,7 @@
     "property_price": "550000",
     "property_title": "Cozy Countryside Cottage",
     "agent_name": "Michael Brown",
+    "agent-email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
     "description": "Quaint cottage nestled in the countryside, perfect for nature lovers seeking tranquility."
 },
@@ -167,6 +185,7 @@
     "property_price": "1250000",
     "property_title": "Elegant Townhouse",
     "agent_name": "Sam Wilson",
+    "agent-email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
     "description": "Sophisticated townhouse with modern architecture and upscale interior design."
 },
@@ -176,6 +195,7 @@
     "property_price": "950000",
     "property_title": "Lakefront Cabin",
     "agent_name": "Daniel Miller",
+    "agent-email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
     "description": "Quintessential lakefront cabin offering stunning views and a serene escape."
 },
@@ -185,6 +205,7 @@
   "property_price": "500000",
   "property_title": "Spacious Family Home",
   "agent_name": "John Smith",
+  "agent-email": "jhonsmith@gmail.com",
   "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
   "description": "A beautiful 5-bedroom home with a large backyard, perfect for families."
 },
@@ -194,6 +215,7 @@
   "property_price": "750000",
   "property_title": "Modern Downtown Condo",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
   "description": "Luxurious condo in the heart of the city with stunning skyline views."
 },
@@ -203,6 +225,7 @@
   "property_price": "1200000",
   "property_title": "Tranquil Countryside Estate",
   "agent_name": "Michael Brown",
+  "agent-email": "michaelbrown@gmail.com",
   "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
   "description": "An elegant estate surrounded by nature, featuring a serene pond and sprawling gardens."
 },
@@ -212,6 +235,7 @@
   "property_price": "900000",
   "property_title": "Urban Chic Loft",
   "agent_name": "Sam Wilson",
+  "agent-email": "samwilson@gmail.com",
   "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
   "description": "Stylish loft in a trendy neighborhood with exposed brick and modern finishes."
 },
@@ -221,6 +245,7 @@
   "property_price": "1500000",
   "property_title": "Mansion with Spectacular Views",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
   "description": "A magnificent mansion offering breathtaking views and luxurious amenities."
 },
@@ -230,6 +255,7 @@
   "property_price": "600000",
   "property_title": "Cozy Suburban Home",
   "agent_name": "John Smith",
+  "agent-email": "jhonsmith@gmail.com",
   "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
   "description": "Charming home in a peaceful neighborhood, ideal for relaxation and comfort."
 },
@@ -239,6 +265,7 @@
   "property_price": "850000",
   "property_title": "Waterfront Villa",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
   "description": "Exquisite villa overlooking the water, featuring a private dock and stunning sunsets."
 },
@@ -248,6 +275,7 @@
   "property_price": "1800000",
   "property_title": "Elegant Manor House",
   "agent_name": "Michael Brown",
+  "agent-email": "michaelbrown@gmail.com",
   "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
   "description": "A grand manor house with beautifully landscaped gardens and classic architecture."
 },
@@ -257,6 +285,7 @@
   "property_price": "700000",
   "property_title": "Rustic Cabin Retreat",
   "agent_name": "Sam Wilson",
+  "agent-email": "samwilson@gmail.com",
   "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
   "description": "A cozy cabin nestled in the woods, perfect for nature lovers and relaxation."
 },
@@ -266,6 +295,7 @@
   "property_price": "1350000",
   "property_title": "Contemporary Urban Penthouse",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
   "description": "Sleek penthouse with modern design elements and expansive city views."
 },
@@ -275,6 +305,7 @@
   "property_price": "600000",
   "property_title": "Spacious Family Home",
   "agent_name": "John Smith",
+  "agent-email": "jhonsmith@gmail.com",
       "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
   "description": "A beautiful 5-bedroom home with a large backyard, modern kitchen, and scenic views."
 },
@@ -284,6 +315,7 @@
   "property_price": "850000",
   "property_title": "Waterfront Villa",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
   "description": "Elegant villa with direct access to the lake, featuring luxurious amenities and a private dock."
 },
@@ -293,6 +325,7 @@
   "property_price": "1200000",
   "property_title": "Mountain View Retreat",
   "agent_name": "Michael Brown",
+  "agent-email": "michaelbrown@gmail.com",
   "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
   "description": "Secluded retreat with breathtaking mountain views, hiking trails, and a cozy cabin."
 },
@@ -311,6 +344,7 @@
   "property_price": "1500000",
   "property_title": "Luxury Hilltop Mansion",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
   "description": "Magnificent mansion atop a hill, offering opulent amenities and stunning panoramic views."
 },
@@ -320,6 +354,7 @@
   "property_price": "950000",
   "property_title": "Coastal Retreat House",
   "agent_name": "John Smith",
+  "agent-email": "jhonsmith@gmail.com",
   "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
   "description": "Relaxing coastal house with ocean views, spacious deck, and easy beach access."
 },
@@ -329,6 +364,7 @@
   "property_price": "500000",
   "property_title": "Rustic Countryside Cottage",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
   "description": "Charming cottage nestled in nature, featuring a fireplace, garden, and tranquil surroundings."
 },
@@ -338,6 +374,7 @@
   "property_price": "1800000",
   "property_title": "Estate with Vineyard",
   "agent_name": "Michael Brown",
+  "agent-email": "michaelbrown@gmail.com",
   "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
   "description": "Sprawling estate with a vineyard, pool, guest house, and stunning sunset views."
 },
@@ -347,6 +384,7 @@
   "property_price": "700000",
   "property_title": "Classic Suburban Home",
   "agent_name": "Sam Wilson",
+  "agent-email": "samwilson@gmail.com",
   "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
   "description": "Traditional home in a family-friendly neighborhood, spacious backyard, and nearby parks."
 },
@@ -356,6 +394,7 @@
   "property_price": "1250000",
   "property_title": "Sleek City Penthouse",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
   "description": "Stylish penthouse with modern amenities, rooftop terrace, and stunning city skyline views."
 },
@@ -365,6 +404,7 @@
   "property_price": "500000",
   "property_title": "Modern City Apartment",
   "agent_name": "John Smith",
+  "agent-email": "jhonsmith@gmail.com",
   "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
   "description": "A chic 2-bedroom apartment in the heart of the city with stunning views and top-notch facilities."
 },
@@ -374,6 +414,7 @@
   "property_price": "750000",
   "property_title": "Spacious Family Home",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
   "description": "A delightful 3-bedroom house with a large backyard, perfect for families and entertaining guests."
 },
@@ -383,6 +424,7 @@
   "property_price": "1200000",
   "property_title": "Luxury Waterfront Villa",
   "agent_name": "Michael Brown",
+  "agent-email": "michaelbrown@gmail.com",
   "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
   "description": "Elegant villa offering stunning waterfront views, private dock, and lavish amenities."
 },
@@ -392,6 +434,7 @@
   "property_price": "900000",
   "property_title": "Cozy Suburban Cottage",
   "agent_name": "Sam Wilson",
+  "agent-email": "samwilson@gmail.com",
   "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
   "description": "Quaint cottage nestled in a peaceful neighborhood, featuring a beautiful garden and modern comforts."
 },
@@ -401,6 +444,7 @@
   "property_price": "1500000",
   "property_title": "Spectacular Mountain Retreat",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
   "description": "A stunning mountain retreat with panoramic views, hiking trails, and a luxurious lodge."
 },
@@ -410,6 +454,7 @@
   "property_price": "650000",
   "property_title": "Urban Loft Living",
   "agent_name": "John Smith",
+  "agent-email": "jhonsmith@gmail.com",
   "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
   "description": "Trendy loft space in a vibrant neighborhood with exposed brick walls and modern design."
 },
@@ -419,6 +464,7 @@
   "property_price": "850000",
   "property_title": "Rustic Countryside Estate",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
   "description": "A sprawling estate on acres of land, offering tranquility and a charming farmhouse lifestyle."
 },
@@ -428,6 +474,7 @@
   "property_price": "1800000",
   "property_title": "Exquisite Luxury Penthouse",
   "agent_name": "Michael Brown",
+  "agent-email": "michaelbrown@gmail.com",
   "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
   "description": "Prestigious penthouse with unparalleled views, fine finishes, and exceptional amenities."
 },
@@ -437,6 +484,7 @@
   "property_price": "1250000",
   "property_title": "Gorgeous Suburban Mansion",
   "agent_name": "Sam Wilson",
+  "agent-email": "samwilson@gmail.com",
   "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
   "description": "Magnificent mansion with sprawling grounds, a pool, and luxurious interiors, perfect for entertaining."
 },
@@ -446,6 +494,7 @@
   "property_price": "2300000",
   "property_title": "Elegant Waterfront Mansion",
   "agent_name": "Daniel Miller",
+  "agent-email": "denialMiler@gmail.com",
   "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
   "description": "Exquisite mansion offering breathtaking waterfront views, opulent living spaces, and refined finishes."
 }

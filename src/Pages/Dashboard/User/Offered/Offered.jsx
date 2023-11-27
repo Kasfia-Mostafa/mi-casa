@@ -27,7 +27,7 @@ const Offered = () => {
       };
 
 
-      if (parseInt(price) >= parseInt(500000)) {
+      if (parseInt(price) >= parseInt(500000) && parseInt(price) < parseInt(3000000)) {
         swal("Thank You!", "Offer has sent to the agent", "success");
       } else {
         swal("Sorry", "You have to higher the price range", "error");

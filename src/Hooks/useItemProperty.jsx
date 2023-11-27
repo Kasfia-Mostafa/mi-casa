@@ -8,10 +8,10 @@ const useItemProperty = () => {
   const axiosSecure = useAxiosSecure();
   const { user} = useAuth()
 
-  const { refetch,data: propertyItem = [] } = useQuery({                                //not the plural
+  const { refetch,data: propertyItem = [] } = useQuery({   
     queryKey: ["propertyItem", user?.email],
     queryFn: async () => {
-      const res = await axiosSecure.get(`/wishList?email=${user.email}`);
+      const res = await axiosSecure.get(`/wishlist?email=${user.email}`);
       return res.data;
     },
   });

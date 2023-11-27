@@ -6,7 +6,7 @@ import DashboardPage from "../../Dashboard/DashBoardPage/DashboardPage";
 const Navbar = () => {
   const [error, setError] = useState("");
   const { user, logOut } = useContext(AuthContext);
-  // console.log(user)
+  console.log(user)
   const navigate = useNavigate();
 
   const navOptions = (

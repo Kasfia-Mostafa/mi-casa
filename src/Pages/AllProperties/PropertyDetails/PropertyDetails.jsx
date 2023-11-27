@@ -25,7 +25,6 @@ const PropertyDetails = () => {
     agent_name,
     agent_image,
     description,
-    _id
   } = eachProperty || [];
 
   useEffect(() => {
@@ -39,7 +38,8 @@ const PropertyDetails = () => {
     const form = event.target;
     const review = form.review.value;
     const title = form.title.value;
-    const reviewPart = { review, title };
+    const email = form.email.value;
+    const reviewPart = { review, title,email };
 
     axiosPublic.post("/review", reviewPart).then((res) => {
       console.log(res.data);
@@ -71,7 +71,7 @@ const PropertyDetails = () => {
         agent_image,
         description,
       }
-      axiosSecure.post('/wishList',cartItem)
+      axiosSecure.post('/wishlist',cartItem)
       .then(res => {
         console.log(res.data)
         if(res.data.insertedId){
@@ -139,6 +139,7 @@ const PropertyDetails = () => {
               className="bg-white border-amber-400 border-2 text-center"
             />
             <div>
+              <input hidden name="email" type="text" defaultValue={user.email}/>
               <textarea
                 name="review"
                 className="textarea mt-4 textarea-warning w-[700px]"

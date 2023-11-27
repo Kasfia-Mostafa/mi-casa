@@ -1,14 +1,11 @@
-
-
-const Reviews = ({eachReview}) => {
-
-const {review} = eachReview || []
+const Reviews = ({ eachReview }) => {
+  const { review } = eachReview || [];
   return (
     <div>
       <div className="max-w-4xl mx-auto mt-5 font-DM">
-      <hr />
-      <p className="text-lg">- {review}</p>
-    </div>
+        <hr />
+        <p className="text-lg">- {review}</p>
+      </div>
     </div>
   );
 };

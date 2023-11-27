@@ -11,6 +11,10 @@ import DashboardPage from "../Pages/Dashboard/DashBoardPage/DashboardPage";
 import UserProfile from "../Pages/Dashboard/User/UserProfile/UserProfile";
 import Wishlist from "../Pages/Dashboard/User/Wishlist/Wishlist";
 import Offered from "../Pages/Dashboard/User/Offered/Offered";
+import UserReviews from "../Pages/Dashboard/User/UserReviews/UserReviews";
+import UserReview from "../Pages/Dashboard/User/UserReviews/UserReview";
+import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile/AdminProfile";
+import ManageUsers from "../Pages/Dashboard/Admin/ManageUsers/ManageUsers";
 
 const router = createBrowserRouter([
   {
@@ -58,15 +62,37 @@ const router = createBrowserRouter([
           {
             path: "wishlist",
             element: <Wishlist></Wishlist>,
-           
           },
           {
             path: "wishlist/:id",
             element: <Offered></Offered>,
             loader: ({ params }) =>
-            fetch(`http://localhost:5000/wishList/${params.id}`),
-           
+              fetch(`http://localhost:5000/wishlist/${params.id}`),
           },
+          {
+            path: "reviews",
+            element: <UserReviews></UserReviews>
+          },
+          {
+            path: "reviews/:id",
+            element: <UserReviews></UserReviews>,
+            loader: ({ params }) =>
+              fetch(`http://localhost:5000/property/${params.id}`),
+          },
+          {
+            path: "reviews/:title",
+            element: <UserReview></UserReview>,
+            loader: ({ params }) =>
+              fetch(`http://localhost:5000/review/${params.title}`),
+          },
+          {
+            path: "adminProfile",
+            element: <AdminProfile></AdminProfile>
+          },
+          {
+            path: "manage_users",
+            element: <ManageUsers></ManageUsers>
+          }
         ],
       },
     ],

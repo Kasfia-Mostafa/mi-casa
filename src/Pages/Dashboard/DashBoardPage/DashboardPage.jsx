@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDashboard } from "react-icons/md";
-import { RiSettings4Line } from "react-icons/ri";
-import { TbReportAnalytics } from "react-icons/tb";
-import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
-import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
+import { AiOutlineUser } from "react-icons/ai";
+import { FiMessageSquare, FiShoppingCart } from "react-icons/fi";
+import { MdOutlineRateReview } from "react-icons/md";
+import { FaAddressCard ,FaAddressBook  } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
+import useAdmin from "../../../Hooks/useAdmin";
 
 const DashboardPage = () => {
+
+  const [admin] = useAdmin()
+
   const menus = [
-    { name: "Profile", link: "/dashboard/userProfile", icon: AiOutlineUser },
-    { name: "Wishlist", link: "/dashboard/wishList", icon: FiShoppingCart },
-    { name: "messages", link: "/", icon: FiMessageSquare },
-    { name: "analytics", link: "/", icon: TbReportAnalytics, margin: true },
-    { name: "File Manager", link: "/", icon: FiFolder },
-    { name: "Cart", link: "/", icon: MdOutlineDashboard },
-    { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
-    { name: "Setting", link: "/", icon: RiSettings4Line },
+    { name: "Profile", link: "/dashboard/userProfile", icon: FaAddressCard  },
+    { name: "Wishlist", link: "/dashboard/wishlist", icon: FiShoppingCart },
+    { name: "Reviews", link: "/dashboard/reviews", icon: FiMessageSquare },
+
+    { name: "Admin", link: "/dashboard/adminProfile", icon: AiOutlineUser, margin:true },
+    { name: "Manage Properties", link: "/dashboard/manage_properties", icon: MdOutlineDashboard },
+    { name: "Manage Users", link: "/dashboard/manage_users", icon:FaAddressBook },
+    { name: "Mange Reviews", link: "/dashboard/manage_reviews", icon: MdOutlineRateReview },
   ];
   const [open, setOpen] = useState(true);
   return (

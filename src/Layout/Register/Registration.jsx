@@ -1,65 +1,66 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const Register = () => {
-  const { createUser, googleSignIn, handleUpdateProfile } = useContext(AuthContext);
+  const { createUser, googleSignIn, updateUserProfile,reset } =
+    useContext(AuthContext);
   const navigate = useNavigate();
-
+  const axiosPublic = useAxiosPublic();
   const [error, setError] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const handleRegister = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event.currentTarget);
-    const form = new FormData(event.currentTarget);
-    const name = form.get("name");
-    const photo = form.get("photo");
-    const email = form.get("email");
-    const password = form.get("password");
+      const form = event.target;
+      const name = form.name.value;
+      const photo = form.photo.value;
+      const email = form.email.value;
+      const password = form.password.value;
 
-    createUser(email, password)
-      .then((result) => {
-        handleUpdateProfile(name, photo)
+    createUser(email, password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+      updateUserProfile(name,photo)
         .then(() => {
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Register successfully",
-            showConfirmButton: false,
-            timer: 1500,
+          const userInfo = {
+            name: name,
+            email: email,
+          };
+          axiosPublic.post("/users", userInfo).then((res) => {
+            if (res.data.insertedId) {
+              console.log("user added to database");
+              reset();
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "User successfully",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate("/");
+            }
           });
-          navigate("/");
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-    if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*[^a-zA-Z]).{6,}$/.test(password)) {
-      setError(
-        "Minimum six characters, one special character and and a capital letter"
-      );
-    } else {
-      setError("");
-      if (email) {
-        createUser(email, password).then((result) => {
-          console.log(result.user);
-        });
-      }
-    }
+        })
+        .catch((error) => console.log(error));
+    });
   };
 
   const handleGoogleRegister = () => {
     googleSignIn().then((result) => {
       console.log(result.user);
+      const userInfo = {
+        email: result.user?.email,
+        name: result.user?.displayName
+      }
+      axiosPublic.post('/users', userInfo)
+      .then(res => {
+        console.log(res.data)
+        navigate('/')
+      })
     });
   };
-
-  const notify = () => toast("Successfully register");
 
   return (
     <div className="h-[80vh] font-DM">
@@ -79,7 +80,7 @@ const Register = () => {
                 Register Account
               </h1>
               <form
-                onSubmit={handleRegister}
+                onSubmit={handleSubmit}
                 className="space-y-4 md:space-y-6"
                 action="#"
               >
@@ -151,9 +152,8 @@ const Register = () => {
 
                 <div className="flex justify-center">
                   <button
-                    onClick={notify}
                     type="submit"
-                    className="text-white bg-gradient-to-r from-slate-700 to-slate-400 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                    className="text-white bg-gradient-to-r from-slate-700 to-slate-400 hover:bg-gradient-to-l font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                   >
                     Register
                   </button>

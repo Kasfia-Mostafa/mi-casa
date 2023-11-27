@@ -28,7 +28,8 @@ const Wish = ({ wishingProperty }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axiosSecure.delete(`/wishList/${_id}`).then((res) => {
+        axiosSecure.delete(`/wishlist/${_id}`).then((res) => {
+          console.log(res.data)
           if (res.data.deletedCount > 0) {
             Swal.fire("Deleted!", "Your file has been deleted.", "success");
           }
