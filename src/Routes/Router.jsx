@@ -18,6 +18,7 @@ import ManageUsers from "../Pages/Dashboard/Admin/ManageUsers/ManageUsers";
 import AgentProfile from "../Pages/Dashboard/Agent/AgentProfile/AgentProfile";
 import AllReviews from "../Pages/Dashboard/Admin/AllReviews/AllReviews";
 import AddProperty from "../Pages/Dashboard/Agent/AddProperty/AddProperty";
+import ManageProperties from "../Pages/Dashboard/Admin/ManageProperties/ManageProperties";
 
 const router = createBrowserRouter([
   {
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
             element: <AllReviews></AllReviews>,
             loader: ({ params }) =>
               fetch(`http://localhost:5000/review/${params.id}`),
+          },
+          {
+            path: "manage_properties",
+            element: <ManageProperties></ManageProperties>,
           },
           //Agent Profile
           {
