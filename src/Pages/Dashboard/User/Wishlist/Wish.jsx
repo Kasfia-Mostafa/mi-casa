@@ -2,10 +2,12 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 import useAxiosSecure from "../../../../Hooks/UseAxiosSecure";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import useItemProperty from "../../../../Hooks/useItemProperty";
 
 const Wish = ({ wishingProperty }) => {
-
   const axiosSecure = useAxiosSecure();
+  const [, refetch] = useItemProperty();
+
   const {
     property_image,
     property_location,
@@ -15,7 +17,6 @@ const Wish = ({ wishingProperty }) => {
     agent_image,
     _id,
   } = wishingProperty || [];
-
 
   const handleDelete = () => {
     Swal.fire({
@@ -29,8 +30,8 @@ const Wish = ({ wishingProperty }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosSecure.delete(`/wishlist/${_id}`).then((res) => {
-          console.log(res.data)
           if (res.data.deletedCount > 0) {
+            refetch();
             Swal.fire("Deleted!", "Your file has been deleted.", "success");
           }
         });
@@ -55,10 +56,17 @@ const Wish = ({ wishingProperty }) => {
             <p>{agent_name}</p>
           </div>
           <p className="text-xl">$ {property_price}</p>
-          
+
           <div className="card-actions justify-end">
             <div className="flex gap-3">
-            <Link to={`${_id}`}><button className="badge badge-outline bg-sky-200 p-4" type="submit">Offered</button></Link>
+              <Link to={`${_id}`}>
+                <button
+                  className="badge badge-outline bg-sky-200 p-4"
+                  type="submit"
+                >
+                  Offered
+                </button>
+              </Link>
               <button
                 onClick={handleDelete}
                 className="badge badge-outline bg-sky-400 text-white p-4"

@@ -15,6 +15,8 @@ import UserReviews from "../Pages/Dashboard/User/UserReviews/UserReviews";
 import UserReview from "../Pages/Dashboard/User/UserReviews/UserReview";
 import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile/AdminProfile";
 import ManageUsers from "../Pages/Dashboard/Admin/ManageUsers/ManageUsers";
+import AgentProfile from "../Pages/Dashboard/Agent/AgentProfile/AgentProfile";
+import AllReviews from "../Pages/Dashboard/Admin/AllReviews/AllReviews";
 
 const router = createBrowserRouter([
   {
@@ -71,7 +73,7 @@ const router = createBrowserRouter([
           },
           {
             path: "reviews",
-            element: <UserReviews></UserReviews>
+            element: <UserReviews></UserReviews>,
           },
           {
             path: "reviews/:id",
@@ -85,14 +87,26 @@ const router = createBrowserRouter([
             loader: ({ params }) =>
               fetch(`http://localhost:5000/review/${params.title}`),
           },
+            //Admin Profile
           {
             path: "adminProfile",
-            element: <AdminProfile></AdminProfile>
+            element: <AdminProfile></AdminProfile>,
           },
           {
             path: "manage_users",
-            element: <ManageUsers></ManageUsers>
-          }
+            element: <ManageUsers></ManageUsers>,
+          },
+          {
+            path: "manage_reviews",
+            element: <AllReviews></AllReviews>,
+            loader: ({ params }) =>
+              fetch(`http://localhost:5000/review/${params.id}`),
+          },
+          //Agent Profile
+          {
+            path: "agentProfile",
+            element: <AgentProfile></AgentProfile>,
+          },
         ],
       },
     ],

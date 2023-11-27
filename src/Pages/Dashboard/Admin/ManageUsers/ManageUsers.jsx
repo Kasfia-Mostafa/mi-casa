@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../Hooks/UseAxiosSecure";
-import { FaChessKing, FaRegUser, FaTrashAlt, FaUsers } from "react-icons/fa";
+import { FaChessKing, FaRegUser, FaTrashAlt, FaUserAstronaut } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const ManageUsers = () => {
@@ -21,6 +21,19 @@ const ManageUsers = () => {
         position: "top-center",
         icon: "success",
         title: `${user.name} is an admin now`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    });
+  };
+  const handleMakeAgent = (user) => {
+    axiosSecure.patch(`/users/agent/${user._id}`).then((res) => {
+      console.log(res.data);
+      if (res.data.modifiedCount > 0) refetch();
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: `${user.name} is an agent now`,
         showConfirmButton: false,
         timer: 1500,
       });
@@ -62,7 +75,8 @@ const ManageUsers = () => {
                 <th></th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Role</th>
+                <th>Admin Role</th>
+                <th>Agent Role</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -83,6 +97,23 @@ const ManageUsers = () => {
                     ) : (
                       <button
                         onClick={() => handleMakeAdmin(user)}
+                        className="btn btn-ghost  bg-emerald-400"
+                      >
+                        <FaRegUser className="text-white" />
+                      </button>
+                    )}
+                  </td>
+                  <td>
+                    {user.role === "agent" ? (
+                      <button
+                        onClick={() => handleMakeAgent(user)}
+                        className="btn btn-ghost  bg-emerald-700"
+                      >
+                        <FaUserAstronaut className="text-white"/>
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => handleMakeAgent(user)}
                         className="btn btn-ghost  bg-emerald-400"
                       >
                         <FaRegUser className="text-white" />

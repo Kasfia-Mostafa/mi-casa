@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../../Layout/AuthProvider/AuthProvider";
 
 
-const AdminProfile = () => {
+const AgentProfile = () => {
   const { user } = useContext(AuthContext);
   console.log(user);
 
@@ -21,7 +21,7 @@ const AdminProfile = () => {
               User Name: {user.displayName}
             </h2>
             <p className="text-slate-200">User Email: {user.email}</p>
-            <p className="text-slate-900 bg-cyan-50 rounded-md p-2">Role: Admin</p>
+            <p className="text-slate-900 bg-cyan-50 rounded-md p-2">Role: Agent</p>
           </div>
         </div>
       </div>
@@ -29,4 +29,4 @@ const AdminProfile = () => {
   );
 };
 
-export default AdminProfile;
+export default AgentProfile;

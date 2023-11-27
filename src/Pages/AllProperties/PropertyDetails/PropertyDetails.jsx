@@ -38,8 +38,10 @@ const PropertyDetails = () => {
     const form = event.target;
     const review = form.review.value;
     const title = form.title.value;
+    const displayName = form.displayName.value;
     const email = form.email.value;
-    const reviewPart = { review, title,email };
+    const photoURL = form.photoURL.value;
+    const reviewPart = { review, title,email ,displayName,photoURL};
 
     axiosPublic.post("/review", reviewPart).then((res) => {
       console.log(res.data);
@@ -139,6 +141,8 @@ const PropertyDetails = () => {
               className="bg-white border-amber-400 border-2 text-center"
             />
             <div>
+              <input hidden name="displayName" type="text" defaultValue={user.displayName}/>
+              <input hidden name="photoURL" type="text" defaultValue={user.photoURL}/>
               <input hidden name="email" type="text" defaultValue={user.email}/>
               <textarea
                 name="review"
@@ -148,7 +152,7 @@ const PropertyDetails = () => {
             </div>
             <button
               type="submit"
-              className="text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+              className="text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
             >
               Submit
             </button>
