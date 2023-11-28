@@ -14,7 +14,6 @@ import useAgent from "../../../Hooks/useAgent";
 const DashboardPage = () => {
   const [isAdmin] = useAdmin();
   const [isAgent] = useAgent();
-  console.log(isAgent)
 
   const menus = [
     { name: "Profile", link: "/dashboard/userProfile", icon: FaAddressCard },

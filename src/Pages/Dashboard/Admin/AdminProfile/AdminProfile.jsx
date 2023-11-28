@@ -4,7 +4,6 @@ import { AuthContext } from "../../../../Layout/AuthProvider/AuthProvider";
 
 const AdminProfile = () => {
   const { user } = useContext(AuthContext);
-  console.log(user);
 
   return (
     <div className="font-DM">

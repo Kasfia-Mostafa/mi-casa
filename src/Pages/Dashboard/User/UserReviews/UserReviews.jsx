@@ -1,38 +1,42 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import UserReview from "./UserReview";
-// import useAxiosSecure from "../../../../Hooks/UseAxiosSecure";
+import useAxiosSecure from "../../../../Hooks/UseAxiosSecure";
 // import { useLoaderData } from "react-router-dom";
 // import { useLoaderData } from "react-router-dom";
 
-import useItemReview from "../../../../Hooks/useItemReview";
+// import useItemReview from "../../../../Hooks/useItemReview";
+// import { useLoaderData } from "react-router-dom";
 
 const UserReviews = () => {
-const [allUserReview] = useItemReview()
-console.log(allUserReview)
+
+  // const abc = useLoaderData()
+  // console.log(abc)
+// const [allUserReview] = useItemReview()
+// console.log(allUserReview)
 
 
 // const abc = useLoaderData()
 // console.log(abc)
-  // const axiosSecure = useAxiosSecure()
-  // const [reviews, setReviews] = useState([]);
-  // const [allReview, setAllReview] = useState([]);
+  const axiosSecure = useAxiosSecure()
+  const [reviews, setReviews] = useState([]);
+  const [allReview, setAllReview] = useState([]);
   
   // console.log(allReview)
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/review`)
-  //     .then((res) => res.json())
-  //     .then((data) => setReviews(data));
-  // });
+  useEffect(() => {
+    fetch(`http://localhost:5000/review`)
+      .then((res) => res.json())
+      .then((data) => setAllReview(data));
+  });
 
   // useEffect(()=>{
   //  axiosSecure.get(`/property`)
   //   .then(res => setAllReview(res.data))
   // },[])
   
-//   const filteredReview = reviews.filter(
-//     (review) => review.title === allReview.property_title
-//   );
+  // const filteredReview = allReview.filter(
+  //   (review) => reviews.email === review.email
+  // );
 // console.log(filteredReview)
 
   return (
@@ -41,7 +45,7 @@ console.log(allUserReview)
         Reviews
       </div>
       <div>
-        {allUserReview.map((eachReview) => (
+        {allReview.map((eachReview) => (
           <UserReview key={eachReview._id} eachReview={eachReview}></UserReview>
         ))}
       </div>

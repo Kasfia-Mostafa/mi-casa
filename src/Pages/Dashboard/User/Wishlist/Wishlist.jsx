@@ -3,7 +3,6 @@ import useItemProperty from "../../../../Hooks/useItemProperty";
 
 const Wishlist = () => {
   const [allProperties] = useItemProperty();
- 
 
   return (
     <div className="font-DM">

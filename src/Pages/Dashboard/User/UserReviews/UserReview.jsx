@@ -3,6 +3,7 @@
 const UserReview = ({eachReview}) => {
 
   const {review} = eachReview || []
+  // console.log(review)
     return (
       <div>
         <div className="max-w-4xl mx-auto mt-5 font-DM">

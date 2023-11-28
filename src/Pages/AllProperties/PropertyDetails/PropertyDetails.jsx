@@ -27,6 +27,8 @@ const PropertyDetails = () => {
     description,
   } = eachProperty || [];
 
+  console.log(eachProperty)
+
   useEffect(() => {
     fetch(`http://localhost:5000/review`)
       .then((res) => res.json())
