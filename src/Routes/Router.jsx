@@ -23,6 +23,7 @@ import AddedProperties from "../Pages/Dashboard/Agent/AddedProperties/AddedPrope
 import SoldProperties from "../Pages/Dashboard/Agent/SoldProperties/SoldProperties";
 import RequestedProperties from "../Pages/Dashboard/Agent/RquestedProperties/RequestedProperties";
 import PropertyBought from "../Pages/Dashboard/User/PropertyBought/PropertyBought";
+import Accepted from "../Pages/Dashboard/User/Accepted/Accepted";
 
 const router = createBrowserRouter([
   {
