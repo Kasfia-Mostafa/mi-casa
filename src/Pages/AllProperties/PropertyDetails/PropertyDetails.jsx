@@ -9,8 +9,8 @@ import useItemProperty from "../../../Hooks/useItemProperty";
 import { useLoaderData, useNavigate } from "react-router-dom";
 
 const PropertyDetails = () => {
-  const navigate = useNavigate();
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   const eachProperty = useLoaderData();
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure()
@@ -26,8 +26,6 @@ const PropertyDetails = () => {
     agent_image,
     description,
   } = eachProperty || [];
-
-  console.log(eachProperty)
 
   useEffect(() => {
     fetch(`http://localhost:5000/review`)

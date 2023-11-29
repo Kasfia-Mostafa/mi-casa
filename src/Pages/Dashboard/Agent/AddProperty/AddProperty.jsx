@@ -20,6 +20,7 @@ const AddProperty = () => {
     const agent_email = form.agent_email.value;
     const agent_image = form.agent_image.value;
     const description = form.description.value;
+    const verify = form.verify.value;
 
     const newAddProperty = {
       property_image,
@@ -30,9 +31,10 @@ const AddProperty = () => {
       agent_name,
       agent_image,
       description,
+      verify
     };
 
-    axiosSecure.post("/addProperty", newAddProperty).then((res) => {
+    axiosSecure.post("/property", newAddProperty).then((res) => {
       console.log(res.data);
       if (res.data.insertedId) {
         refetch()
@@ -144,6 +146,17 @@ const AddProperty = () => {
                     placeholder=""
                     className="input input-bordered text-gray-600"
                     required
+                  />
+                </div>
+                <div className="form-control">
+                  <input
+                    value="Not verified"
+                    name="verify"
+                    type="text"
+                    placeholder=""
+                    className="input input-bordered text-gray-600"
+                    required
+                    hidden
                   />
                 </div>
               </div>

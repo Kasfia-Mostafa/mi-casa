@@ -19,6 +19,10 @@ import AgentProfile from "../Pages/Dashboard/Agent/AgentProfile/AgentProfile";
 import AllReviews from "../Pages/Dashboard/Admin/AllReviews/AllReviews";
 import AddProperty from "../Pages/Dashboard/Agent/AddProperty/AddProperty";
 import ManageProperties from "../Pages/Dashboard/Admin/ManageProperties/ManageProperties";
+import AddedProperties from "../Pages/Dashboard/Agent/AddedProperties/AddedProperties";
+import SoldProperties from "../Pages/Dashboard/Agent/SoldProperties/SoldProperties";
+import RequestedProperties from "../Pages/Dashboard/Agent/RquestedProperties/RequestedProperties";
+import PropertyBought from "../Pages/Dashboard/User/PropertyBought/PropertyBought";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +66,10 @@ const router = createBrowserRouter([
           {
             path: "userProfile",
             element: <UserProfile></UserProfile>,
+          },
+          {
+            path: "propertyBought",
+            element: <PropertyBought></PropertyBought>,
           },
           {
             path: "wishlist",
@@ -122,6 +130,18 @@ const router = createBrowserRouter([
           {
             path: "add_property",
             element: <AddProperty></AddProperty>,
+          },
+          {
+            path: "addedProperties",
+            element: <AddedProperties></AddedProperties>
+          },
+          {
+            path: "soldProperties",
+            element: <SoldProperties></SoldProperties>
+          },
+          {
+            path: "requestProperties",
+            element: <RequestedProperties></RequestedProperties>
           },
         ],
       },

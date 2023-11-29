@@ -6,7 +6,7 @@ import { FiMessageSquare, FiShoppingCart } from "react-icons/fi";
 import { MdOutlineRateReview,MdOutlineAddHomeWork,MdOutlineMapsHomeWork } from "react-icons/md";
 import { FaAddressCard, FaAddressBook,FaUserEdit } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
-import { RiHome6Line } from "react-icons/ri";
+import { RiHome6Line, RiShoppingBag2Line } from "react-icons/ri";
 import { Link, Outlet } from "react-router-dom";
 import useAdmin from "../../../Hooks/useAdmin";
 import useAgent from "../../../Hooks/useAgent";
@@ -19,6 +19,7 @@ const DashboardPage = () => {
     { name: "Profile", link: "/dashboard/userProfile", icon: FaAddressCard },
     { name: "Wishlist", link: "/dashboard/wishlist", icon: FiShoppingCart },
     { name: "Reviews", link: "/dashboard/reviews", icon: FiMessageSquare },
+    { name: "Property Bought", link: "/dashboard/propertyBought", icon: RiShoppingBag2Line },
   ];
   const adminMenus = [
     { name: "Profile", link: "/dashboard/userProfile", icon: FaAddressCard },
