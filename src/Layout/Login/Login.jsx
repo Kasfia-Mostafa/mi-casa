@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-// import { Helmet } from "react-helmet-async";
+
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
@@ -54,9 +54,7 @@ const axiosPublic = useAxiosPublic()
 
   return (
     <>
-      {/* <Helmet>
-        <title>Mi Casa | Login</title>
-      </Helmet> */}
+   
       <div className="h-[80vh] font-DM">
         <div className="w-full relative">
           <img

@@ -42,8 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: "allProperties/:id",
-        element: <PropertyDetails></PropertyDetails>,
-        // element:<PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
+        element:<PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
         loader: ({ params }) =>
           fetch(`https://mi-casa-server.vercel.app/property/${params.id}`),
       },
