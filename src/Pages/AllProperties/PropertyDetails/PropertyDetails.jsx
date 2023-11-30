@@ -1,18 +1,16 @@
 import { RiVerifiedBadgeFill } from "react-icons/ri";
-import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
-import { useContext, useEffect, useState } from "react";
 import Reviews from "../Reviews/Reviews";
 import { AuthContext } from "../../../Layout/AuthProvider/AuthProvider";
 import useAxiosSecure from "../../../Hooks/UseAxiosSecure";
 import useItemProperty from "../../../Hooks/useItemProperty";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 
 const PropertyDetails = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const eachProperty = useLoaderData();
-  const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure()
   const [reviews, setReviews] = useState([]);
   const [,refetch]= useItemProperty()
@@ -27,11 +25,9 @@ const PropertyDetails = () => {
     description,
   } = eachProperty || [];
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/review`)
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
-  });
+
+    axiosSecure(`https://mi-casa-server.vercel.app/review`)
+      .then((res) =>setReviews(res.data))
 
   const handleReview = (event) => {
     event.preventDefault();
@@ -43,7 +39,7 @@ const PropertyDetails = () => {
     const photoURL = form.photoURL.value;
     const reviewPart = { review, title,email ,displayName,photoURL};
 
-    axiosPublic.post("/review", reviewPart).then((res) => {
+    axiosSecure.post("/review", reviewPart).then((res) => {
       console.log(res.data);
       if (res.data.insertedId) {
         Swal.fire({

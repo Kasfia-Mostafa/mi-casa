@@ -23,7 +23,8 @@ import AddedProperties from "../Pages/Dashboard/Agent/AddedProperties/AddedPrope
 import SoldProperties from "../Pages/Dashboard/Agent/SoldProperties/SoldProperties";
 import RequestedProperties from "../Pages/Dashboard/Agent/RquestedProperties/RequestedProperties";
 import PropertyBought from "../Pages/Dashboard/User/PropertyBought/PropertyBought";
-import Accepted from "../Pages/Dashboard/User/Accepted/Accepted";
+import Payment from "../Pages/Dashboard/User/UserPayment/Payment/Payment";
+import Update from "../Pages/Dashboard/Agent/Update/Update";
 
 const router = createBrowserRouter([
   {
@@ -37,20 +38,20 @@ const router = createBrowserRouter([
       {
         path: "allProperties",
         element: <Properties></Properties>,
-        loader: () => fetch(`http://localhost:5000/propertyCount`),
+        loader: () => fetch(`https://mi-casa-server.vercel.app/propertyCount`),
       },
       {
         path: "allProperties/:id",
         element: <PropertyDetails></PropertyDetails>,
         // element:<PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/property/${params.id}`),
+          fetch(`https://mi-casa-server.vercel.app/property/${params.id}`),
       },
       {
         path: "review/:title",
         element: <Reviews></Reviews>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/review/${params.title}`),
+          fetch(`https://mi-casa-server.vercel.app/review/${params.title}`),
       },
       {
         path: "login",
@@ -73,6 +74,12 @@ const router = createBrowserRouter([
             element: <PropertyBought></PropertyBought>,
           },
           {
+            path: "payment/:id",
+            element: <Payment></Payment>,
+            loader: ({ params }) =>
+              fetch(`https://mi-casa-server.vercel.app/offered/${params.id}`),
+          },
+          {
             path: "wishlist",
             element: <Wishlist></Wishlist>,
           },
@@ -80,7 +87,7 @@ const router = createBrowserRouter([
             path: "wishlist/:id",
             element: <Offered></Offered>,
             loader: ({ params }) =>
-              fetch(`http://localhost:5000/wishlist/${params.id}`),
+              fetch(`https://mi-casa-server.vercel.app/wishlist/${params.id}`),
           },
           {
             path: "reviews",
@@ -90,21 +97,21 @@ const router = createBrowserRouter([
             path: "reviews/:email",
             element: <UserReviews></UserReviews>,
             loader: ({ params }) =>
-              fetch(`http://localhost:5000/review/${params.email}`),
+              fetch(`https://mi-casa-server.vercel.app/review/${params.email}`),
           },
           {
             path: "reviews/:id",
             element: <UserReviews></UserReviews>,
             loader: ({ params }) =>
-              fetch(`http://localhost:5000/property/${params.id}`), 
+              fetch(`https://mi-casa-server.vercel.app/property/${params.id}`),
           },
           {
             path: "reviews/:title",
             element: <UserReview></UserReview>,
             loader: ({ params }) =>
-              fetch(`http://localhost:5000/review/${params.title}`),
+              fetch(`https://mi-casa-server.vercel.app/review/${params.title}`),
           },
-            //Admin Profile
+          //Admin Profile
           {
             path: "adminProfile",
             element: <AdminProfile></AdminProfile>,
@@ -117,7 +124,7 @@ const router = createBrowserRouter([
             path: "manage_reviews",
             element: <AllReviews></AllReviews>,
             loader: ({ params }) =>
-              fetch(`http://localhost:5000/review/${params.id}`),
+              fetch(`https://mi-casa-server.vercel.app/review/${params.id}`),
           },
           {
             path: "manage_properties",
@@ -134,15 +141,19 @@ const router = createBrowserRouter([
           },
           {
             path: "addedProperties",
-            element: <AddedProperties></AddedProperties>
+            element: <AddedProperties></AddedProperties>,
           },
           {
             path: "soldProperties",
-            element: <SoldProperties></SoldProperties>
+            element: <SoldProperties></SoldProperties>,
           },
           {
             path: "requestProperties",
-            element: <RequestedProperties></RequestedProperties>
+            element: <RequestedProperties></RequestedProperties>,
+          },
+          {
+            path: "update/:id",
+            element: <Update></Update>,
           },
         ],
       },

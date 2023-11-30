@@ -35,25 +35,34 @@ const Accepted = ({ property }) => {
       <td>
         {clicked ? (
           <button className="btn btn-ghost">
-            <p className="text-green-500 text-base">Accepted</p>
+          
           </button>
         ) : (
-          <button onClick={handleAcceptProperty} className="btn btn-ghost">
-            <p className="text-slate-700 text-base">Pending</p>
+          <>
+         <div className="flex items-center">
+         <div>
+         <button onClick={handleAcceptProperty} className="btn btn-ghost">
+            <p className="text-slate-700">Pending</p>
           </button>
-        )}
-      </td>
-      <td>
+         </div>
+          <div>
+          <td>
         {rejectClicked ? (
           <button onClick={handleRejectProperty} className="btn btn-ghost">
-            <p className="text-base text-slate-600">Rejected</p>
+            <p className="text-slate-600">Rejected</p>
           </button>
         ) : (
           <button onClick={handleRejectProperty} className="btn btn-ghost">
-            <p className="text-base text-red-600">Reject</p>
+            <p className="text-red-600">Reject</p>
           </button>
         )}
       </td>
+          </div>
+         </div>
+    </>
+        )}
+      </td>
+      
     </div>
   );
 };

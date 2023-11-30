@@ -1,43 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import UserReview from "./UserReview";
 import useAxiosSecure from "../../../../Hooks/UseAxiosSecure";
-// import { useLoaderData } from "react-router-dom";
-// import { useLoaderData } from "react-router-dom";
-
-// import useItemReview from "../../../../Hooks/useItemReview";
-// import { useLoaderData } from "react-router-dom";
-
 const UserReviews = () => {
+  const axiosSecure = useAxiosSecure();
 
-  // const abc = useLoaderData()
-  // console.log(abc)
-// const [allUserReview] = useItemReview()
-// console.log(allUserReview)
-
-
-// const abc = useLoaderData()
-// console.log(abc)
-  const axiosSecure = useAxiosSecure()
-  const [reviews, setReviews] = useState([]);
   const [allReview, setAllReview] = useState([]);
-  
-  // console.log(allReview)
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/review`)
-      .then((res) => res.json())
-      .then((data) => setAllReview(data));
-  });
-
-  // useEffect(()=>{
-  //  axiosSecure.get(`/property`)
-  //   .then(res => setAllReview(res.data))
-  // },[])
-  
-  // const filteredReview = allReview.filter(
-  //   (review) => reviews.email === review.email
-  // );
-// console.log(filteredReview)
+  axiosSecure.get(`/review`).then((res) => setAllReview(res.data));
 
   return (
     <div className="font-DM">

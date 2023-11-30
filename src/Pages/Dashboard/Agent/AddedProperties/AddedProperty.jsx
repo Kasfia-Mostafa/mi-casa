@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../Hooks/UseAxiosSecure";
-import { useEffect, useState } from "react";
-
 
 const AddedProperty = ({ properties }) => {
   const {
@@ -12,29 +11,30 @@ const AddedProperty = ({ properties }) => {
     agent_name,
     agent_image,
     _id,
-    verify
+    verify,
   } = properties || [];
-  // const axiosSecure = useAxiosSecure();
 
-  const [verified, setVerified] = useState([]);
-  // const [verifiedTitle, setVerifiedTitle] = useState([]);
+  const axiosSecure = useAxiosSecure();
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/property`)
-      .then((res) => res.json())
-      .then((data) => setVerified(data));
-  });
-  // axiosSecure.get("/property").then((res) => setVerified(res.data));
-
-  // const allVerifiedTitle = verified.map((eachVerifiedTitle) =>
-  //   setVerifiedTitle(eachVerifiedTitle.property_title)
-  // );
-
-  const filtering = verified.filter(
-    (fil) => fil.property_title === properties.property_title
-  );
-  console.log(filtering);
-  // console.log(property_title)
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/property/${_id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+          }
+        });
+      }
+    });
+  };
 
   return (
     <div>
@@ -64,16 +64,18 @@ const AddedProperty = ({ properties }) => {
           </div>
           <div className="card-actions justify-end">
             <div className="badge badge-outline p-4">${property_price}</div>
-            <Link to={`/allProperties/${_id}`}>
+            <Link to={`/dashboard/update/${_id}`}>
               <div className="badge badge-outline bg-sky-400 text-white p-4">
                 Update
               </div>
             </Link>
-            <Link to={`/allProperties/${_id}`}>
-              <div className="badge badge-outline bg-sky-400 text-white p-4">
-                Delete
-              </div>
-            </Link>
+
+            <button
+              onClick={handleDelete}
+              className="badge badge-outline bg-sky-400 text-white p-4"
+            >
+              Delete
+            </button>
           </div>
         </div>
       </div>

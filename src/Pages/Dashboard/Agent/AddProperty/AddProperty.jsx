@@ -17,21 +17,21 @@ const AddProperty = () => {
     const property_title = form.property_title.value;
     const property_price = form.property_price.value;
     const agent_name = form.agent_name.value;
-    const agent_email = form.agent_email.value;
+    const email = form.email.value;
     const agent_image = form.agent_image.value;
     const description = form.description.value;
-    const verify = form.verify.value;
+    const status = form.status.value;
 
     const newAddProperty = {
       property_image,
       property_location,
       property_title,
       property_price,
-      agent_email,
+      email,
       agent_name,
       agent_image,
       description,
-      verify
+      status
     };
 
     axiosSecure.post("/property", newAddProperty).then((res) => {
@@ -128,7 +128,7 @@ const AddProperty = () => {
                   </label>
                   <input
                     defaultValue={user?.email}
-                    name="agent_email"
+                    name="email"
                     type="text"
                     placeholder=""
                     className="input input-bordered text-gray-600"
@@ -150,8 +150,8 @@ const AddProperty = () => {
                 </div>
                 <div className="form-control">
                   <input
-                    value="Not verified"
-                    name="verify"
+                    value="pending"
+                    name="status"
                     type="text"
                     placeholder=""
                     className="input input-bordered text-gray-600"

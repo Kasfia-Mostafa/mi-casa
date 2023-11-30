@@ -18,14 +18,15 @@ const RequestedProperties = () => {
         <div className="overflow-x-auto">
           <table className="table table-zebra">
             <thead>
-              <tr className="text-base text-black">
+              <tr className="text-lg text-blue-400">
                 <th>#</th>
                 <th>Property Title</th>
                 <th>Property Location</th>
                 <th>Buyer Name</th>
                 <th>Buyer Email</th>
                 <th>Offer Price</th>
-                <th className="text-center">Verify</th>
+                <th>Status</th>
+                <th className="text-center">Confirmation</th>
               </tr>
             </thead>
             <tbody className="text-slate-600">
@@ -37,6 +38,7 @@ const RequestedProperties = () => {
                   <td>{property.bName}</td>
                   <td>{property.bEmail}</td>
                   <td>{property.price}</td>
+                  <td className="text-green-500">{property.status}</td>
                   <Accepted key={property._id} property={property}></Accepted>
                 </tr>
               ))}

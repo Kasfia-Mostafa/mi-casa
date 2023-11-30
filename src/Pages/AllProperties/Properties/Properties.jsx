@@ -27,7 +27,7 @@ const Properties = () => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/property?page=${currentPage}&size=${itemsPerPage}`
+      `https://mi-casa-server.vercel.app/property?page=${currentPage}&size=${itemsPerPage}`
     )
       .then((res) => res.json())
       .then((data) => setPlots(data));

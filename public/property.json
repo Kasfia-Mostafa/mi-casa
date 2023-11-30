@@ -7,6 +7,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "A beautiful 3-bedroom home with a spacious backyard and modern amenities."
   },
   {
@@ -17,6 +18,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "Stunning villa with direct beach access, panoramic ocean views, and premium features."
   },
   {
@@ -27,6 +29,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "A charming country home surrounded by nature, featuring a cozy fireplace and scenic views."
   },
   {
@@ -37,6 +40,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Spacious loft-style apartment overlooking the city skyline with modern design elements."
   },
   {
@@ -47,6 +51,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "An exquisite mansion estate with lavish interiors, sprawling gardens, and private amenities."
   },
   {
@@ -57,6 +62,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "A delightful 4-bedroom house in a quiet neighborhood with a lovely backyard."
   },
   {
@@ -67,6 +73,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "Modern condo living at its finest with city conveniences and upscale finishes."
   },
   {
@@ -77,6 +84,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "A luxurious waterfront home featuring stunning views and a private dock."
   },
   {
@@ -87,6 +95,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Contemporary townhouse offering sleek design and convenient urban living."
   },
   {
@@ -97,6 +106,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "Tranquil retreat nestled in the mountains with stunning panoramic views."
   },
   {
@@ -107,6 +117,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "A cozy 3-bedroom home with a beautiful garden and nearby amenities."
   },
   {
@@ -117,6 +128,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "Elegant villa overlooking the river, featuring a pool and lush landscaped grounds."
   },
   {
@@ -127,6 +139,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "Secluded retreat with stunning mountain vistas, hiking trails, and a modern cabin."
   },
   {
@@ -137,6 +150,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Spacious loft in the heart of the city with exposed brick walls and city skyline views."
   },
   {
@@ -147,6 +161,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "Grand mansion atop the hills, featuring sprawling gardens and exquisite interiors."
   },
   {
@@ -157,6 +172,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "Immaculate suburban home with a spacious backyard and modern amenities."
   },
   {
@@ -167,6 +183,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "Stunning estate along the coast, with private beach access and breathtaking ocean views."
   },
   {
@@ -177,6 +194,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "Quaint cottage nestled in the countryside, perfect for nature lovers seeking tranquility."
   },
   {
@@ -187,6 +205,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Sophisticated townhouse with modern architecture and upscale interior design."
   },
   {
@@ -197,6 +216,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "Quintessential lakefront cabin offering stunning views and a serene escape."
   },
   {
@@ -207,6 +227,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "A beautiful 5-bedroom home with a large backyard, perfect for families."
   },
   {
@@ -217,6 +238,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "Luxurious condo in the heart of the city with stunning skyline views."
   },
   {
@@ -227,6 +249,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "An elegant estate surrounded by nature, featuring a serene pond and sprawling gardens."
   },
   {
@@ -237,6 +260,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Stylish loft in a trendy neighborhood with exposed brick and modern finishes."
   },
   {
@@ -247,6 +271,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "A magnificent mansion offering breathtaking views and luxurious amenities."
   },
   {
@@ -257,6 +282,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "Charming home in a peaceful neighborhood, ideal for relaxation and comfort."
   },
   {
@@ -267,6 +293,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "Exquisite villa overlooking the water, featuring a private dock and stunning sunsets."
   },
   {
@@ -277,6 +304,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "A grand manor house with beautifully landscaped gardens and classic architecture."
   },
   {
@@ -287,6 +315,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "A cozy cabin nestled in the woods, perfect for nature lovers and relaxation."
   },
   {
@@ -297,6 +326,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "Sleek penthouse with modern design elements and expansive city views."
   },
   {
@@ -307,6 +337,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "A beautiful 5-bedroom home with a large backyard, modern kitchen, and scenic views."
   },
   {
@@ -317,6 +348,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "Elegant villa with direct access to the lake, featuring luxurious amenities and a private dock."
   },
   {
@@ -327,6 +359,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "Secluded retreat with breathtaking mountain views, hiking trails, and a cozy cabin."
   },
   {
@@ -336,6 +369,7 @@
     "property_title": "Modern Downtown Loft",
     "agent_name": "Daniel Smith",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Chic urban loft with sleek design, open floor plan, and easy access to city attractions."
   },
   {
@@ -346,6 +380,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "Magnificent mansion atop a hill, offering opulent amenities and stunning panoramic views."
   },
   {
@@ -356,6 +391,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "Relaxing coastal house with ocean views, spacious deck, and easy beach access."
   },
   {
@@ -366,6 +402,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "Charming cottage nestled in nature, featuring a fireplace, garden, and tranquil surroundings."
   },
   {
@@ -376,6 +413,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "Sprawling estate with a vineyard, pool, guest house, and stunning sunset views."
   },
   {
@@ -386,6 +424,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Traditional home in a family-friendly neighborhood, spacious backyard, and nearby parks."
   },
   {
@@ -396,6 +435,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "Stylish penthouse with modern amenities, rooftop terrace, and stunning city skyline views."
   },
   {
@@ -406,6 +446,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "A chic 2-bedroom apartment in the heart of the city with stunning views and top-notch facilities."
   },
   {
@@ -416,6 +457,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "A delightful 3-bedroom house with a large backyard, perfect for families and entertaining guests."
   },
   {
@@ -426,6 +468,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "Elegant villa offering stunning waterfront views, private dock, and lavish amenities."
   },
   {
@@ -436,6 +479,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Quaint cottage nestled in a peaceful neighborhood, featuring a beautiful garden and modern comforts."
   },
   {
@@ -446,6 +490,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "A stunning mountain retreat with panoramic views, hiking trails, and a luxurious lodge."
   },
   {
@@ -456,6 +501,7 @@
     "agent_name": "John Smith",
     "agent_email": "jhonsmith@gmail.com",
     "agent_image": "https://i.ibb.co/p2DNTg6/OIP-9.jpg",
+    "status":"Verified",
     "description": "Trendy loft space in a vibrant neighborhood with exposed brick walls and modern design."
   },
   {
@@ -466,6 +512,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/zGf7qPs/OIP-7.jpg",
+    "status":"Verified",
     "description": "A sprawling estate on acres of land, offering tranquility and a charming farmhouse lifestyle."
   },
   {
@@ -476,6 +523,7 @@
     "agent_name": "Michael Brown",
     "agent_email": "michaelbrown@gmail.com",
     "agent_image": "https://i.ibb.co/HBspPq3/R.jpg",
+    "status":"Verified",
     "description": "Prestigious penthouse with unparalleled views, fine finishes, and exceptional amenities."
   },
   {
@@ -486,6 +534,7 @@
     "agent_name": "Sam Wilson",
     "agent_email": "samwilson@gmail.com",
     "agent_image": "https://i.ibb.co/gPZX1fP/R-2.jpg",
+    "status":"Verified",
     "description": "Magnificent mansion with sprawling grounds, a pool, and luxurious interiors, perfect for entertaining."
   },
   {
@@ -496,6 +545,7 @@
     "agent_name": "Daniel Miller",
     "agent_email": "denialMiler@gmail.com",
     "agent_image": "https://i.ibb.co/bHgkkzL/OIP-8.jpg",
+    "status":"Verified",
     "description": "Exquisite mansion offering breathtaking waterfront views, opulent living spaces, and refined finishes."
   }
 ]
