@@ -1,8 +1,24 @@
-# React + Vite
+## 🏨 Mi Casa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Develop intuitive real estate websites for seamless property browsing. Modern design, user-friendly interfaces, and responsive layouts for your property listings.
+<br>
 
-Currently, two official plugins are available:
+<a href='https://mi-casa-a1de0.web.app/'>Live Demo</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Admin email: alanwalker@gmail.com <br>
+Admin password: alanwalker#9 <br>
+Agent email: jhonsmith@gmail.com <br>
+Agent password: jhonsmith#9 <br>
+
+### ⭐ Features
+
+- Framer motion animation
+- User Review
+- Verification for property
+- Admin and Agent panel
+- Email SignIn, SignUp
+- Google SignIn
+- Stripe Payment
+- JWT token
+- React.js, Node.js, MongoDB, express.js
+
