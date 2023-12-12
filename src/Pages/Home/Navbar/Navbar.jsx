@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Layout/AuthProvider/AuthProvider";
 import DashboardPage from "../../Dashboard/DashBoardPage/DashboardPage";
+import Toggle from "../../../Components/Toggle/Toggle";
 
 const Navbar = () => {
   const [error, setError] = useState("");
@@ -138,6 +139,7 @@ const Navbar = () => {
               )}
             </ul>
           </div>
+         
         </div>
       </div>
     </div>
