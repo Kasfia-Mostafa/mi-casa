@@ -1,8 +1,10 @@
-
+import ScrollToTop from "react-scroll-to-top";
 
 const Footer = () => {
   return (
     <div>
+      <ScrollToTop smooth top="20" width="40" height="20" />
+
       <footer className="p-4 bg-white sm:p-6 font-DM border-t-2">
         <div className="mx-auto max-w-screen-xl">
           <div className="md:flex md:justify-between">
@@ -10,7 +12,9 @@ const Footer = () => {
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#50748c]">
                 Mi CASA
               </span>
-              <p className="text-gray-500 font-DM">A real estate platform to build your own house</p>
+              <p className="text-gray-500 font-DM">
+                A real estate platform to build your own house
+              </p>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
@@ -19,10 +23,14 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400">
                   <li className="mb-4">
-                    <a href="" className="hover:underline ">Homely</a>
+                    <a href="" className="hover:underline ">
+                      Homely
+                    </a>
                   </li>
                   <li>
-                    <a href="" className="hover:underline ">OwnYourHouse</a>
+                    <a href="" className="hover:underline ">
+                      OwnYourHouse
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -32,18 +40,12 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400">
                   <li className="mb-4">
-                    <a
-                      href=""
-                      className="hover:underline "
-                    >
+                    <a href="" className="hover:underline ">
                       Facebook
                     </a>
                   </li>
                   <li>
-                    <a
-                      href=""
-                      className="hover:underline"
-                    >
+                    <a href="" className="hover:underline">
                       Instagram
                     </a>
                   </li>

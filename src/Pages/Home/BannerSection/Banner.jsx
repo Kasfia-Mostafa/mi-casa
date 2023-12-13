@@ -67,7 +67,7 @@ const Banner = () => {
     },
   };
   return (
-    <div className="h-screen px-12 relative overflow-hidden bg-white">
+    <div className="h-screen px-12 relative overflow-hidden ">
       
       <div className="absolute -top-12 -left-12 w-[300px] h-[300px] bg-[#99bad0] blur-[120px]" />
       <div className="absolute bottom-0 -right-12 w-[300px] h-[300px] bg-[#85b0cc] blur-[100px]" />

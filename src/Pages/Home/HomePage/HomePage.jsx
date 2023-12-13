@@ -7,11 +7,13 @@ import FAQ from "../FAQ/FAQ";
 const HomePage = () => {
   return (
     <div>
+      
       <Banner></Banner>
       <Cards></Cards>
       <CardSwipper></CardSwipper>
       <Toggle></Toggle>
       <FAQ></FAQ>
+      
     </div>
   );
 };
