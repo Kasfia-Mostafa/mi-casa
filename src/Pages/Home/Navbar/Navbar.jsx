@@ -18,7 +18,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#529AC0] text-lg font-DM underline"
+              ? "text-[#275b76] text-lg font-DM"
               : "text-[#529AC0] text-lg font-DM"
           }
         >
@@ -32,7 +32,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#529AC0] text-lg font-DM underline"
+              ? "text-[#275b76] text-lg font-DM"
               : "text-[#529AC0] text-lg font-DM"
           }
         >
@@ -46,7 +46,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#529AC0] font-DM underline"
+              ? "text-[#275b76] text-lg font-DM"
               : "text-[#529AC0] text-lg font-DM"
           }
         >

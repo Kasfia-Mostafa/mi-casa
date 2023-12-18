@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Toggle from "../../../Components/Toggle/Toggle";
 
 const Banner = () => {
   const titleAnimation = {
@@ -67,10 +66,8 @@ const Banner = () => {
     },
   };
   return (
-    <div className="h-screen px-12 relative overflow-hidden ">
-      
-      <div className="absolute -top-12 -left-12 w-[300px] h-[300px] bg-[#99bad0] blur-[120px]" />
-      <div className="absolute bottom-0 -right-12 w-[300px] h-[300px] bg-[#85b0cc] blur-[100px]" />
+    <div className="h-screen  relative overflow-hidden bg-white">
+      <img  src="https://i.ibb.co/kmSpxh5/R-6.jpg" className="absolute w-full h-full blur-sm object-cover" alt="" />
       <div>
         <motion.img
           src="https://i.ibb.co/0f0LQHs/circle.png"
@@ -88,7 +85,7 @@ const Banner = () => {
             variants={titleAnimation}
             initial="hidden"
             animate="show"
-            className="flex text-8xl font-San font-bold text-[#497898] drop-shadow-lg z-50"
+            className="flex text-8xl font-San font-bold text-[#ffffff] drop-shadow-lg z-50"
           >
             {Array.from("Mi-CASA").map((letter, idx) => (
               <motion.span key={idx} variants={titleAnimationChildren}>
