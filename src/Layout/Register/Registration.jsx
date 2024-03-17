@@ -6,7 +6,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const Register = () => {
   const { createUser, googleSignIn, updateUserProfile,reset } =
-    useContext(AuthContext);
+  useContext(AuthContext);
   const navigate = useNavigate();
   const axiosPublic = useAxiosPublic();
   const [error, setError] = useState("");

@@ -1,6 +1,8 @@
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 const Property = ({ plot }) => {
+
+
   const {
     property_image,
     property_location,

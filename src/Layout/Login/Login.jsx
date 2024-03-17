@@ -7,7 +7,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const Login = () => {
   const [error, setError] = useState("");
-const axiosPublic = useAxiosPublic()
+  const axiosPublic = useAxiosPublic();
 
   const { signIn, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();

@@ -9,7 +9,6 @@ const HomePage = () => {
       <Banner></Banner>
       <Cards></Cards>
       <CardSwipper></CardSwipper>
-
       <FAQ></FAQ>
     </div>
   );

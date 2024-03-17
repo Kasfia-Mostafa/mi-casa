@@ -6,7 +6,10 @@ import DashboardPage from "../../Dashboard/DashBoardPage/DashboardPage";
 const Navbar = () => {
   const [error, setError] = useState("");
   const { user, logOut } = useContext(AuthContext);
-  console.log(user)
+
+  if (user) {
+    const { displayName, email, photoURL } = user;
+  // console.log(user)
   const navigate = useNavigate();
 
   const navOptions = (
@@ -55,6 +58,7 @@ const Navbar = () => {
       </li>
     </>
   );
+
   const handleSignOut = () => {
     logOut()
       .then((result) => {
