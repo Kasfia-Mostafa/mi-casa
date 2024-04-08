@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Property from "./Property";
 import { useLoaderData } from "react-router-dom";
 import "../../../Components/Style/Button.css";
+import Navbar from "../../Home/Navbar/Navbar";
 
 const Properties = () => {
   const { count } = useLoaderData();
@@ -34,9 +35,11 @@ const Properties = () => {
   }, [currentPage, itemsPerPage]);
 
   return (
+   <>
+   <Navbar></Navbar>
     <div className="bg-white pb-16">
-      <div className="bg-pink-100 h-80">
-        <h2 className="text-6xl font-DM text-center pt-10 text-pink-800">
+      <div className=" h-80">
+        <h2 className="text-6xl font-DM text-center pt-10 text-red-800">
           All Properties
         </h2>
         <div className="m-16">
@@ -103,7 +106,7 @@ const Properties = () => {
           <button onClick={handleNextPage}>Next</button>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 

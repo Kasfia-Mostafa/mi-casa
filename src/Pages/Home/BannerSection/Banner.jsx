@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import home from "../../../assets/home.jpg";
+import Navbar from "../Navbar/Navbar";
 
 const Banner = () => {
   const titleAnimation = {
@@ -52,40 +54,22 @@ const Banner = () => {
     },
   };
 
-  const circleAnimation = {
-    hidden: {
-      scale: 0,
-    },
-    show: {
-      scale: 1,
-      transition: {
-        delay: 3.2,
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
   return (
-    <div className="h-screen  relative overflow-hidden bg-white">
-      <img  src="https://i.ibb.co/kmSpxh5/R-6.jpg" className="absolute w-full h-full blur-sm object-cover" alt="" />
-      <div>
-        <motion.img
-          src="https://i.ibb.co/0f0LQHs/circle.png"
-          alt="art"
-          className="w-[100px] absolute top-[60px] right-[440px] animate-spin-slow z-50"
-          variants={circleAnimation}
-          initial="hidden"
-          animate="show"
+    <div className="h-screen  relative overflow-hidden">
+      <img
+        src={home}
+        className="absolute w-full h-full blur-sm object-cover"
+        alt="home"
         />
-      </div>
 
+        <Navbar></Navbar>
       <section className="h-[calc(100vh-80px)] flex flex-col items-center relative">
         <div className="absolute left-[200px] top-[200px] h-[100px] flex items-center overflow-hidden">
           <motion.div
             variants={titleAnimation}
             initial="hidden"
             animate="show"
-            className="flex text-8xl font-San font-bold text-[#ffffff] drop-shadow-lg z-50"
+            className="flex text-8xl font-San font-bold p-6 mb-2 bg-slate-50 text-red-800 drop-shadow-2xl z-50"
           >
             {Array.from("Mi-CASA").map((letter, idx) => (
               <motion.span key={idx} variants={titleAnimationChildren}>
@@ -96,7 +80,7 @@ const Banner = () => {
         </div>
         <div className="w-[800px] m-auto">
           <motion.img
-            src="https://i.ibb.co/kmSpxh5/R-6.jpg"
+            src={home}
             alt="art"
             className="object-cover"
             variants={imgAnimation}
@@ -110,7 +94,7 @@ const Banner = () => {
           initial="hidden"
           animate="show"
         >
-          <p className="text-[#35729c] text-sm text-justify font-DM">
+          <p className="text-red-800 text-sm text-justify font-DM">
             "Welcome to our real estate platform! Discover properties, connect
             with agents, and explore insights for seamless property
             transactions. Start your search today!"{" "}
