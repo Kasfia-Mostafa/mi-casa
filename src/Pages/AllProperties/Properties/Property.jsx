@@ -19,7 +19,7 @@ const Property = ({ plot }) => {
           <img className="h-80 w-full" src={property_image} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-pink-500 font-bold text-2xl">
+          <h2 className="card-title text-yellow-600 font-bold text-2xl">
             {property_title}
             <RiVerifiedBadgeFill className="text-green-500 text-xl" />
           </h2>
@@ -31,7 +31,7 @@ const Property = ({ plot }) => {
           <div className="card-actions justify-end">
             <div className="badge badge-outline p-4">${property_price}</div>
             <Link to={`/allProperties/${_id}`}>
-              <div className="badge badge-outline bg-sky-400 text-white p-4">
+              <div className="badge badge-outline bg-gradient-to-tr from-yellow-600 to-yellow-300  text-white p-4">
                 Details
               </div>
             </Link>

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import home from "../../../assets/home.jpg";
-import Navbar from "../Navbar/Navbar";
 
 const Banner = () => {
   const titleAnimation = {
@@ -62,7 +61,6 @@ const Banner = () => {
         alt="home"
         />
 
-        <Navbar></Navbar>
       <section className="h-[calc(100vh-80px)] flex flex-col items-center relative">
         <div className="absolute left-[200px] top-[200px] h-[100px] flex items-center overflow-hidden">
           <motion.div

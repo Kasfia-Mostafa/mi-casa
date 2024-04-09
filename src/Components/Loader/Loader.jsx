@@ -13,8 +13,8 @@ const Loader = () => {
   return (
     <div className="flex justify-center items-center h-[100vh] bg-white">
       <FallingLines
-  color="#28baf5"
-  width="100"
+  color="#991b1b"
+  width="150"
   visible={true}
   ariaLabel='falling-lines-loading'
 />
